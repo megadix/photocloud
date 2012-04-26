@@ -1,4 +1,6 @@
-<h1>Ultime collezioni</h1>
+<div class="page-header">
+  <h1>Ultime collezioni</h1>
+</div>
 
 <div class="row">
   <div class="span5">

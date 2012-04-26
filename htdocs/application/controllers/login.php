@@ -24,7 +24,7 @@ class Login extends CI_Controller {
       );
       
       $this->session->set_userdata($data);
-      redirect('admin/index');
+      redirect('collection/index');
     }
     else {
       $this->index();

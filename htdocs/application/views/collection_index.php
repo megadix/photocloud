@@ -1,4 +1,16 @@
-<h1>Collezioni</h1>
+<?php
+$logged_in = isset($this->session->userdata['logged_in']);
+?>
+
+<div class="page-header">
+  <h1>Collezioni</h1>
+</div>
+
+<p><?php
+if ($logged_in) {
+  echo anchor('admin/collection_add', 'Aggiungi', 'class="btn"');
+}
+?></p>
 
 <div class="row">
   <div class="span9">

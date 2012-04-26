@@ -49,23 +49,44 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
+          <a class="brand" href="#">Photocloud</a>
           <ul class="nav">
             <li ><?php echo anchor('/', 'Home'); ?></li>
             <li class="divider-vertical"></li>
-            <li ><?php echo anchor('collection/index', 'Collezioni'); ?></li>
+            <li ><?php echo anchor('collection/index', 'Collezioni'); ?></li
+            </li>
           </ul>
-          <!-- FIXME : mostrarne solo uno -->
-          <?php echo anchor('login/index', '<i class="icon-user"></i>Login', 'class="btn pull-right"'); ?>
-          <?php echo anchor('login/logout', '<i class="icon-user"></i>Logout', 'class="btn pull-right"'); ?>
-        </div>
-      </div>
-    </div>
+          <div class="nav-collapse pull-right">
+            <?php
+            if (isset($this->session->userdata['logged_in'])) {
+              echo anchor('login/logout', '<i class="icon-user"></i>Logout', 'class="btn"');
+            }
+            else {
+              echo anchor('login/index', '<i class="icon-user"></i>Login', 'class="btn"');
+            }
+            ?>
+          </div>
+        </div><!-- class="container" -->
+      </div><!-- class="navbar-inner" -->
+    </div><!-- class="navbar" -->
     
     <div class="container">
+      <?php
+      if (isset($this->session->userdata['logged_in'])) {
+        echo '<div class="pull-right">';
+        echo 'Logged in as <em>' . $this->session->userdata['username'] . '</em>';
+        echo '</div>';
+      }
+      ?>
     
-      <!-- FIXME : mostrarlo solo sulla homepage -->
+      <?php
+      if (isset($show_masthead)) {
+        ?>
       <div class="hero-unit">
         <h1>Photocloud</h1>
         <p>Gallery fotografica basata su PHP e Cloud Storage.</p>
       </div>
+        <?php
+      }
+      ?>
   

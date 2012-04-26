@@ -1,9 +1,21 @@
 <?php
+$logged_in = isset($this->session->userdata['logged_in']);
+
 $name = htmlspecialchars($collection->name, ENT_NOQUOTES, 'UTF-8');
 $description = htmlspecialchars($collection->description, ENT_NOQUOTES, 'UTF-8');
 ?>
-<h1><?php echo $name;?></h1>
+<div class="page-header">
+  <h1><?php echo $name;?></h1>
+</div>
+
 <p><?php echo $description;?></p>
+<hr />
+
+<p><?php
+if ($logged_in) {
+  echo anchor('admin/image_add/' . $collection->id, 'Aggiungi foto', 'class="btn"');
+}
+?></p>
 
 <div id="gallery">
 <?php

@@ -4,6 +4,7 @@ class Home extends CI_Controller {
 
   public function index() {
     $data['main_content'] = 'home';
+    $data['show_masthead'] = true;
     
     $this->load->model('Collection_model');
     $data['collections'] = $this->Collection_model->get_most_recent();

@@ -22,4 +22,5 @@ class Collection extends CI_Controller {
     
     $this->load->view('includes/template', $data);
   }
+  
 }

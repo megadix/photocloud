@@ -1,0 +1,42 @@
+<mockup version="1.0" skin="sketch" measuredW="407" measuredH="365" mockupW="347" mockupH="345">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::Title" x="60" y="20" w="-1" h="-1" measuredW="251" measuredH="50" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>My%20photocloud</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Image" x="120" y="161" w="240" h="160" measuredW="77" measuredH="79" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>02_gallery_02_gallery_detail%26bm%3B02_gallery_02_gallery_detail.bmml%26bm%3B02_gallery_02_gallery_detail.bmml%26bm%3B02_gallery_02_gallery_detail.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2260%2C141%2C300%2C301%22%20href%3D%2202_gallery_02_gallery_detail.bmml%22%20alt%3D%2202_gallery_02_gallery_detail%22%20id%3D%2211%22/%3E</map>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Icon" x="73" y="223" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>LeftTriangleIcon%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Icon" x="383" y="223" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>RightTriangleIcon%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::StickyNote" x="228" y="262" w="155" h="103" measuredW="109" measuredH="123" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Carousel%20con%20le%20ultime%20gallery%20caricate%0A%28tasti%20avanti%20/%20indietro%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Label" x="181" y="132" w="-1" h="-1" measuredW="118" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Inverno%202011%20Praga</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::LinkBar" x="64" y="85" w="-1" h="-1" measuredW="171" measuredH="21" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>01_index%26bm%3B01_index.bmml%26bm%3B01_index.bmml%26bm%3B01_index.bmml%2C02_gallery_01_index%26bm%3B02_gallery_01_index.bmml%26bm%3B02_gallery_01_index.bmml%26bm%3B02_gallery_01_index.bmml%2C03_login%26bm%3B03_login.bmml%26bm%3B03_login.bmml%26bm%3B03_login.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%224%2C65%2C42%2C86%22%20href%3D%2201_index.bmml%22%20alt%3D%2201_index%22%20id%3D%2217_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%2262%2C65%2C120%2C86%22%20href%3D%2202_gallery_01_index.bmml%22%20alt%3D%2202_gallery_01_index%22%20id%3D%2217_1%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22140%2C65%2C175%2C86%22%20href%3D%2203_login.bmml%22%20alt%3D%2203_login%22%20id%3D%2217_2%22/%3E%0A</map>
+        <text>Home%2C%20Collezioni%2C%20Login</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

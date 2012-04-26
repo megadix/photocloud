@@ -1,0 +1,20 @@
+h1. Photocloud
+
+Photocloud è una galleria fotografica realizzata con queste tecnologie:
+* PHP;
+* CodeIgniter;
+* Cloud storage basato su API S3
+
+h2. Prerequisiti
+
+* Apache 2.x;
+* PHP 5.1.6 o superiore;
+* MySql 5.x
+
+h2. Installazione e configurazione
+
+* estrarre archivio in una directory accessibile al web server;
+* _application/config/config.php_: encryption_key : inserire una stringa casuale
+* _application/config/database.php_: inserire i valori corretti per _hostname_, _username_, _password_, _database_
+
+

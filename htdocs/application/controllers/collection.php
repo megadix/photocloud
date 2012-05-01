@@ -6,7 +6,7 @@ class Collection extends CI_Controller {
     $data['main_content'] = 'collection_index';
     
     $this->load->model('Collection_model');
-    $data['collections'] = $this->Collection_model->get_most_recent();
+    $data['collections'] = $this->Collection_model->get_collections();
     
     $this->load->view('includes/template', $data);
   }

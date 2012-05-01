@@ -14,14 +14,14 @@ class Collection_model extends CI_Model {
     parent::__construct();
   }
   
-  function get_most_recent($limit = 5) {
+  public function get_collections($limit = null) {
     // most recent collections
     $this->db->order_by('id', 'desc');
-    $query = $this->db->get(Collection_model::$table_name, 5);
+    $query = $this->db->get(Collection_model::$table_name, $limit);
     return $query->result();
   }
   
-  function get($id) {
+  public function get($id) {
     $this->db->where('id', $id);
     $query = $this->db->get(Collection_model::$table_name);
     return $query->row();

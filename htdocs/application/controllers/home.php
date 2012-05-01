@@ -7,7 +7,7 @@ class Home extends CI_Controller {
     $data['show_masthead'] = true;
     
     $this->load->model('Collection_model');
-    $data['collections'] = $this->Collection_model->get_most_recent();
+    $data['collections'] = $this->Collection_model->get_collections(5);
     
     $this->load->view('includes/template', $data);
   }

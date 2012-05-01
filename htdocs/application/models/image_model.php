@@ -18,7 +18,7 @@ class Image_model extends CI_Model {
     parent::__construct();
   }
   
-  function get_images($collection_id) {
+  public function get_images($collection_id) {
     $this->db->where('collection_id', $collection_id);
     $this->db->order_by('id', 'asc');
     $query = $this->db->get(Image_model::$table_name);

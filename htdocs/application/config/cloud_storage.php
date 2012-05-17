@@ -11,6 +11,9 @@
 $config['accessKey'] = '';
 $config['secretKey'] = '';
 $config['useSSL'] = '';
+
+// rm1.cloudaccess.it : HostingSolutions.it
+// s3.amazonaws.com : Amazon Web Services
 $config['endpoint'] = '';
 
 $config['bucket_name'] = '';

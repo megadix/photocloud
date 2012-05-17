@@ -11,4 +11,9 @@ class Home extends CI_Controller {
     
     $this->load->view('includes/template', $data);
   }
+
+  public function about() {
+    $data['main_content'] = 'about';
+    $this->load->view('includes/template', $data);
+  }
 }

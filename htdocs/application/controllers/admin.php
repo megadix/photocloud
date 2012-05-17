@@ -174,7 +174,8 @@ class Admin extends CI_Controller {
     
     $data['file'] = array(
         'name' => 'file',
-        'id' => 'file'
+        'id' => 'file',
+        'rules' => 'required'
       );
     
       $data['submit'] = array(

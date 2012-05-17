@@ -43,8 +43,9 @@
           <ul class="nav">
             <li ><?php echo anchor('/', 'Home'); ?></li>
             <li class="divider-vertical"></li>
-            <li ><?php echo anchor('collection/index', 'Collezioni'); ?></li
-            </li>
+            <li ><?php echo anchor('collection/index', 'Collezioni'); ?></li>
+            <li class="divider-vertical"></li>
+            <li ><?php echo anchor('/home/about', 'About'); ?></li>
           </ul>
           <div class="nav-collapse pull-right">
             <?php

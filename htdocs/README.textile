@@ -3,7 +3,14 @@ h1. Photocloud
 Photocloud è una galleria fotografica realizzata con queste tecnologie:
 * PHP;
 * CodeIgniter;
-* Cloud storage basato su API S3
+* Twitter Bootstrap;
+* MySql;
+* Amazon S3 PHP Class di Donovan Schonknecht.
+
+Il progetto iniziale è nato grazie alla sponsorizzazione di HostingSolutions:
+http://www.hostingsolutions.it/
+
+che ha finanziato il progetto e ha fornito il cloud storage per i test.
 
 h2. Prerequisiti
 
@@ -16,5 +23,10 @@ h2. Installazione e configurazione
 * estrarre archivio in una directory accessibile al web server;
 * _application/config/config.php_: encryption_key : inserire una stringa casuale
 * _application/config/database.php_: inserire i valori corretti per _hostname_, _username_, _password_, _database_
-
-
+* _application/config/cloud_storage.php_:
+** accessKey : API KEY per accedere allo storage;
+** secretKey : chiave segreta;
+** useSSL : true se il vostro fornitore supporta i collegamenti SSL;
+** endpoint : endpoint a cui collegarsi:
+** bucket_name : nome del bucket contenente le foto;
+** base_path : path di base all'interno del bucket.

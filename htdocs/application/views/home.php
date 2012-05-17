@@ -3,7 +3,8 @@
 </div>
 
 <div class="row">
-  <div class="span5">
+  <div class="span3">&nbsp;</div>
+  <div class="span6">
     <div id="collectionsCarousel" class="carousel slide">
       <div class="carousel-inner" style="text-align: center;">
         <?php
@@ -32,9 +33,10 @@
       </div><!-- class="carousel-inner" -->
       <a class="left carousel-control" href="#collectionsCarousel" data-slide="prev">‹</a>
       <a class="right carousel-control" href="#collectionsCarousel" data-slide="next">›</a>
-    </div><!-- id="myCarousel" -->
+    </div>
   </div>
-</div>
+  <div class="span3">&nbsp;</div>
+</div><!-- class="row" -->
 
 
 <script type="text/javascript">

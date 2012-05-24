@@ -1,6 +1,7 @@
 <div class="page-header">
+  <?php $detail_url = base_url() . 'index.php/collection/get/' . $collection->id; ?>
   <h1>Aggiungi immagine
-  <small>Collezione: <em><? echo htmlspecialchars($collection->name, ENT_NOQUOTES, 'UTF-8'); ?></small>
+  <small>Collezione: <a href="<?php echo $detail_url;?>"><em><? echo htmlspecialchars($collection->name, ENT_NOQUOTES, 'UTF-8'); ?></em></a></small>
   </h1>
 </div>
 

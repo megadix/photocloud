@@ -8,16 +8,16 @@
 |
 */
 
-$config['accessKey'] = '';
-$config['secretKey'] = '';
-$config['useSSL'] = '';
+$config['storage_accessKey'] = '';
+$config['storage_secretKey'] = '';
+$config['storage_useSSL'] = '';
 
 // rm1.cloudaccess.it : HostingSolutions.it
 // s3.amazonaws.com : Amazon Web Services
-$config['endpoint'] = '';
+$config['storage_endpoint'] = '';
 
-$config['bucket_name'] = '';
-$config['base_path'] = '';
+$config['storage_bucket_name'] = '';
+$config['storage_base_path'] = '';
 
 /* End of file cloudStorage */
 /* Location: ./application/config/cloud_storage.php */

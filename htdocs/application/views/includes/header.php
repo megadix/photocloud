@@ -79,5 +79,22 @@
       </div>
         <?php
       }
+      
+      $flashErrorMessages = $this->session->flashdata('errorMessages');
+      $showErrors = isset($errorMessages) || ! empty($flashErrorMessages);
+      
+      if ($showErrors) {
+        echo '<div class="alert alert-error"><h3>Errore</h3>';
+        if (isset($errorMessages)) {
+          // TODO better formatting
+          print_r($errorMessages);
+        }
+        if (isset($flashErrorMessages)) {
+          // TODO better formatting
+          print_r($flashErrorMessages);
+        }
+        echo '</div>';
+      }
       ?>
   
+      

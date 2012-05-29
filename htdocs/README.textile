@@ -21,6 +21,7 @@ h2. Prerequisiti
 h2. Installazione e configurazione
 
 * estrarre archivio in una directory accessibile al web server;
+* _application/config/login.php_: modificare la password di default per admin;
 * _application/config/config.php_: encryption_key : inserire una stringa casuale
 * _application/config/database.php_: inserire i valori corretti per _hostname_, _username_, _password_, _database_
 * _application/config/cloud_storage.php_:

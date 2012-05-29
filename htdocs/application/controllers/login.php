@@ -2,6 +2,11 @@
 
 class Login extends CI_Controller {
 
+  function __construct() {
+    parent::__construct();
+    $this->config->load('login');
+  }
+  
   public function index() {
     $data['main_content'] = 'login_form';
     $this->load->view('includes/template', $data);
@@ -16,8 +21,9 @@ class Login extends CI_Controller {
     $username = $this->input->post('username');
     $password = $this->input->post('password');
     
-    // FIXME add real login
-    if ($username == 'admin' && $password == 'admin') {
+    if ($username == $this->config->item('login_admin_username') &&
+        $password == $this->config->item('login_admin_password')) {
+    
       $data = array(
         'username' => $username,
         'logged_in' => true
@@ -27,6 +33,7 @@ class Login extends CI_Controller {
       redirect('collection/index');
     }
     else {
+      $this->session->set_flashdata('errorMessages', 'combinazione username/password non valida');
       $this->index();
     }
   }

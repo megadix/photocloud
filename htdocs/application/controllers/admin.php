@@ -6,6 +6,12 @@ class Admin extends CI_Controller {
     parent::__construct();
     $this->_isLoggedIn();
     $this->config->load('cloud_storage');
+    
+    $uploadConfig['upload_path'] = './uploads/';
+    $uploadConfig['allowed_types'] = 'jpg';
+    $uploadConfig['max_size'] = '10000';
+    $uploadConfig['allowed_types'] = 'jpg';
+    $this->load->library('upload', $uploadConfig);
 
     $params = array(
       'accessKey' => $this->config->item('storage_accessKey'),
@@ -68,18 +74,11 @@ class Admin extends CI_Controller {
         $this->image_add($collection_id);
       }
       else {
-        $config['upload_path'] = './uploads/';
-        $config['allowed_types'] = 'jpg';
-        $config['max_size'] = '100';
-        $config['allowed_types'] = 'jpg';
-        $this->load->library('upload', $config);
-
         if (! $this->upload->do_upload('file')) {
           $this->session->set_flashdata('errorMessages', $this->upload->display_errors());
           $this->image_add($collection_id, $data);
         }
         else {
-
           $upload_data = $this->upload->data();
 
           // resize image and create thumbnail
@@ -126,7 +125,7 @@ class Admin extends CI_Controller {
               
           if (S3::putObject($inputImage, $this->config->item('storage_bucket_name'), $imagePath, S3::ACL_PUBLIC_READ) == false ||
               S3::putObject($inputThumb, $this->config->item('storage_bucket_name'), $imageThumbPath, S3::ACL_PUBLIC_READ) == false) {
-            throw new Exception('errorMessages', 'Problemi nella creazione dell\'oggetto nel cloud storage');
+            throw new Exception('Problemi nella creazione dell\'oggetto nel cloud storage');
           }
           
           unlink($upload_data['file_path'] . $resizedImageName);

@@ -64,15 +64,23 @@ class S3
 	private static $__signingKeyPairId = null; // AWS Key Pair ID
 	private static $__signingKeyResource = false; // Key resource, freeSigningKey() must be called to clear it from memory
 
+
 	/**
-	 * megadix: modified constructor for CodeIgniter compatibility
-	 */
-	public function __construct($params) {
-		if ($params['accessKey'] !== null && $params['secretKey'] !== null)
-			self::setAuth($params['accessKey'], $params['secretKey']);
-		self::$useSSL = $params['useSSL'];
-		self::$endpoint = $params['endpoint'];
+	* Constructor - if you're not using the class statically
+	*
+	* @param string $accessKey Access key
+	* @param string $secretKey Secret key
+	* @param boolean $useSSL Enable SSL
+	* @return void
+	*/
+	public function __construct($accessKey = null, $secretKey = null, $useSSL = false, $endpoint = 's3.amazonaws.com')
+	{
+		if ($accessKey !== null && $secretKey !== null)
+			self::setAuth($accessKey, $secretKey);
+		self::$useSSL = $useSSL;
+		self::$endpoint = $endpoint;
 	}
+
 
 	/**
 	* Set the sertvice endpoint

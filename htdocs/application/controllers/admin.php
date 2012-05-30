@@ -7,10 +7,11 @@ class Admin extends CI_Controller {
     $this->_isLoggedIn();
     $this->config->load('cloud_storage');
     
-    $uploadConfig['upload_path'] = './uploads/';
-    $uploadConfig['allowed_types'] = 'jpg';
-    $uploadConfig['max_size'] = '10000';
-    $uploadConfig['allowed_types'] = 'jpg';
+    $uploadConfig = array(
+      'upload_path' => './uploads/',
+      'allowed_types' => 'jpg',
+      'max_size' => 10000
+    );
     $this->load->library('upload', $uploadConfig);
 
     $params = array(
@@ -19,7 +20,7 @@ class Admin extends CI_Controller {
       'useSSL' => $this->config->item('storage_useSSL'),
       'endpoint' => $this->config->item('storage_endpoint')
     );
-    $this->load->library('s3', $params);
+    $this->load->library('s3_ci', $params);
   }
 
   // ====== Collection ======
@@ -79,6 +80,7 @@ class Admin extends CI_Controller {
           $this->image_add($collection_id, $data);
         }
         else {
+
           $upload_data = $this->upload->data();
 
           // resize image and create thumbnail

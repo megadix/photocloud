@@ -10,7 +10,7 @@
 
 $config['storage_accessKey'] = '';
 $config['storage_secretKey'] = '';
-$config['storage_useSSL'] = '';
+$config['storage_useSSL'] = false;
 
 // rm1.cloudaccess.it : HostingSolutions.it
 // s3.amazonaws.com : Amazon Web Services
